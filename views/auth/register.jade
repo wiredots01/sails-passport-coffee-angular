@@ -1,0 +1,22 @@
+
+extends ../layout
+
+
+block body
+
+  .row
+    .column.large-4.small-centered
+      if errors
+          each error in errors
+            .alert-box.alert.radius(data-alert='')
+              = __(error)
+      h1.text-center Register
+      form(role='form', action='/auth/local/register', method='post')
+        label Username
+        input(type='text', name='username')
+        label Email
+        input(type='email', name='email')
+        label Password
+        input(type='password', name='password')
+        input.button.success.expand.radius(type='submit', value='Lets do this!')
+

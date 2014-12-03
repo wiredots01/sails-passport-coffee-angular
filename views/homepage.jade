@@ -1,0 +1,22 @@
+extends ./layout
+
+
+block body
+  .main-content
+    .row
+      .large-2.columns
+        ul.side-nav
+          li
+            a(ng-href='/') Clinic
+          li
+            a(ng-href='/doctors') Doctors
+          li
+            a(href='/auth/logout', target="_self") Logout
+      .large-10.columns("ng-view" = "")
+
+
+
+
+
+
+
